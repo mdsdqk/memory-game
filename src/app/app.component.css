@@ -1,0 +1,8 @@
+.title {
+	font-family: 'Nabla', cursive;
+	font-size: 4rem;
+}
+
+.name {
+	color: var(--accent-color);
+}
