@@ -8,7 +8,7 @@ import { Card, State } from 'src/app/interfaces/card';
 })
 export class GridCardsComponent implements OnInit {
 
-  gridTemplate: string = "";
+  gridTemplate!: string;
   @Input() rows: number = 0;
   @Input() cols: number = 0;
   numberMap: Array<number> = Array();
@@ -27,7 +27,7 @@ export class GridCardsComponent implements OnInit {
   }
 
   setGridStyle(): void {
-    this.gridTemplate = `repeat(1fr, ${this.rows}) / repeat(1fr, ${this.cols})`;
+    this.gridTemplate = `repeat(${this.rows}, minmax(0, 1fr)) / repeat(${this.cols}, minmax(0, 1fr))`;
   }
 
   generateCards(): void {

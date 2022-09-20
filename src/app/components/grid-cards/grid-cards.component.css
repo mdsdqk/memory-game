@@ -1,4 +1,22 @@
 .container {
-	width: 80vw;
-	max-width: 80vw;
+	margin: auto;
+	gap: 0.5rem;
+	min-height: 0;
+	min-width: 0;
+	aspect-ratio: 1/1;
+}
+
+
+@media (orientation: landscape) {
+	.container {
+		height: 70vh;
+		max-width: 80vw;
+	}
+}
+
+@media (orientation: portrait) {
+	.container {
+		width: 80vw;
+		max-width: 70vh;
+	}
 }
