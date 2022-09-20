@@ -21,11 +21,9 @@ body {
 }
 
 footer {
-	position: absolute;
-	bottom: 5%;
 	text-align: center;
-	font-size: larger;
-	color: var(--secondary-color);
+	font-size: medium;
+	color: var(--secondary-color);	
 }
 
 /* utility classes */
@@ -55,6 +53,14 @@ footer {
 
 .m-0 {
 	margin: 0;
+}
+
+.m-4 {
+	margin: 2rem;
+}
+
+.p-2 {
+	padding: 0.5rem;
 }
 
 .mt-2 {
