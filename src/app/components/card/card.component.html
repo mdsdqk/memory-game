@@ -1,3 +1,8 @@
-<div class="card" (click)="selectCard()">
-	<span *ngIf="selected">{{content}}</span>
+<div class="card">
+	<div class="default" *ngIf="isStateDefault()">
+
+	</div>
+	<div class="visible" *ngIf="isStateVisible()">
+		<img [src]="imgSrc" [alt]="imgAlt">
+	</div>
 </div>
