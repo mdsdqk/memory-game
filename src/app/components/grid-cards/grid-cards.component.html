@@ -1,3 +1,5 @@
 <div class="d-grid container" [ngStyle]="{'grid-template': gridTemplate}">
-	<app-card *ngFor="let card of cards, let i = index" [cardData]="cards[i]"></app-card>
+	<app-card *ngFor="let card of cards, let i = index" [cardData]="cards[i]"
+		(click)="selectCard(i)"
+	></app-card>
 </div>
