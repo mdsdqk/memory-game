@@ -1,8 +1,7 @@
-<div class="card" *ngIf="!isStateRemoved()">
-	<div class="default" *ngIf="isStateDefault()">
-
+<div class="card" [hidden]="isStateRemoved()">
+	<div class="back" [hidden]="!isStateDefault()">
 	</div>
-	<div class="visible" *ngIf="isStateVisible()">
+	<div class="front" [hidden]="!isStateVisible()">
 		<img [src]="imgSrc" [alt]="imgAlt">
 	</div>
 </div>

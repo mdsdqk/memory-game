@@ -1,12 +1,26 @@
 .card {
-	aspect-ratio: 1/1;
-	background-color: #af9e81;	
+	aspect-ratio: 1/1;		
 	border-radius: 0.5rem;
-	box-shadow: 0 0 2px 4px rgba(34, 34, 34, 0.4);
+	box-shadow: 0 0 2px 4px rgba(34, 34, 34, 0.6);
+	-webkit-box-shadow: 0 0 2px 4px rgba(34, 34, 34, 0.6);
+	-moz-box-shadow: 0 0 2px 4px rgba(34, 34, 34, 0.6);
 	overflow: hidden; 
   min-width: 0;
+}
 
-	transition: all 250ms ease-in-out;
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.back {
+	background-color: #af9e81;
+}
+
+.back, .front {
+	width: 100%;
+	height: 100%;
 }
 
 @media (orientation: landscape) {

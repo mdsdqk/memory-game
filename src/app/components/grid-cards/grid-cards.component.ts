@@ -28,7 +28,7 @@ export class GridCardsComponent implements OnInit, DoCheck {
           this.selectedCards[0].state = this.selectedCards[1].state = State.DEFAULT;
         
         this.selectedCards = Array();
-      }, 2500);
+      }, 800);
       
     }
   }
@@ -65,12 +65,13 @@ export class GridCardsComponent implements OnInit, DoCheck {
   }
 
   selectCard(index: number) {
-    if(this.selectedCards.length >= 2) return;
+    if(this.selectedCards.length >= 2 || this.cards[index].state === State.REMOVED) return;
 
     
     if(this.cards[index].state === State.VISIBLE) {
       this.cards[index].state = State.DEFAULT;
       this.selectedCards.pop();
+      return;
     }
     
     this.cards[index].state = State.VISIBLE;
