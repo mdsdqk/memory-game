@@ -1,7 +1,7 @@
-<div class="card" [hidden]="isStateRemoved()">
-	<div class="back" [hidden]="!isStateDefault()">
+<div class="card" [@flip]="cardData.state">
+	<div class="back" [hidden]="isStateVisible()">
 	</div>
-	<div class="front" [hidden]="!isStateVisible()">
+	<div class="front" [hidden]="isStateDefault()">
 		<img [src]="imgSrc" [alt]="imgAlt">
 	</div>
 </div>

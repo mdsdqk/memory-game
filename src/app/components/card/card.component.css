@@ -6,21 +6,9 @@
 	-moz-box-shadow: 0 0 2px 4px rgba(34, 34, 34, 0.6);
 	overflow: hidden; 
   min-width: 0;
-}
-
-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.back {
-	background-color: #af9e81;
-}
-
-.back, .front {
-	width: 100%;
-	height: 100%;
+	cursor: pointer;
+	
+	transform-style: preserve-3d;
 }
 
 @media (orientation: landscape) {
@@ -35,7 +23,24 @@ img {
 	}
 }
 
-.card:hover {
-	transform: scale(1.05);
-	cursor: pointer;
+.back, .front {
+	position: absolute; 
+	width: 100%;
+	height: 100%;
+  top: 0;
+	/* backface-visibility: hidden; */
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.back {
+	background-color: #af9e81;
+	/* transform: rotateY(0deg); */
+}
+
+.front {
+	/* transform: rotateY(180deg); */
 }
